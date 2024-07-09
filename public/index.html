@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRONANA WebApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <div class="balances">
+        <div class="balance tron">
+            <div class="balance-info">
+                <p class="balance-label">tron balance</p>
+                <div class="balance-main">
+                    <img src="tron-logo.png" alt="Tron Logo" class="balance-logo tron-logo">
+                    <p class="balance-amount" id="tronBalance">0.00</p>
+                </div>
+            </div>
+            <button id="sendTronButton" class="send-button">Send</button>
+        </div>
+        <div class="balance shib">
+            <div class="balance-info">
+                <p class="balance-label">SHIB balance</p>
+                <div class="balance-main">
+                    <img src="shib-logo.png" alt="SHIB Logo" class="balance-logo">
+                    <p class="balance-amount">62500 SHIB</p>
+                </div>
+            </div>
+            <button id="sendShibButton" class="send-button">Send</button>
+        </div>
+    </div>
+    <div class="fan">
+        <img src="fan.png" alt="Fan" class="fan-blades">
+    </div>
+    <div class="counter-buttons">
+        <p id="currentTimeText"><span id="currentTime"></span></p>
+        <p id="ghs"><span id="gh/s"></span></p>
+        <button id="claimButton">Claim</button>
+        <button id="boostButton">Boost</button>
+    </div>
+    <div class="navigation-bar">
+        <button id="home">
+            <img src="home-icon.png" alt="Home">
+            <span>Home</span>
+        </button>
+        <button id="wallet">
+            <img src="wallet-icon.png" alt="Wallet">
+            <span>Wallet</span>
+        </button>
+        <button id="friends">
+            <img src="friends-icon.png" alt="Friends">
+            <span>Friends</span>
+        </button>
+        <button id="missions">
+            <img src="missions-icon.png" alt="Missions">
+            <span>Missions</span>
+        </button>
+    </div>
+</div>
+<!-- Popup modal -->
+<div id="popupModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="h21">Enter your personal TRX address</h2>
+        <p id="p1">This amount will be sent to the TRC20 compatible wallet address</p>
+        <p id="p2">Minimum send amount is 20 TRX</p>
+        <input type="text" id="trxAddress" placeholder="Your TRX(TRC20) Address">
+        <input type="number" id="trxAmount" placeholder="Amount">
+        <button id="submitSend">Send</button>
+        <button id="cancelSend">Not yet</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

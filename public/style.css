@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 115vh;
+    margin: 0;
+
+
+}
+#app {
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    height: calc(100vh + 100px); /* Высота экрана + 100px */
+    overflow-y: auto; /* Добавим вертикальную прокрутку */
+    padding: 20px; /* Добавим отступы, чтобы контент не прилипал к краям */
+    box-sizing: border-box; /* Включим отступы и границы в общую ширину и высоту */
+    margin: 0; /* Убираем отступы */
+    padding: 10px;
+}
+.balances {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.balance-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.balance-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5); /* Semi-transparent */
+    margin: 0;
+}
+
+.balance-main {
+    display: flex;
+    align-items: center;
+}
+
+.balance-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%; /* Make the logo circular */
+    object-fit: cover; /* Ensure the image covers the entire circular area */
+}
+
+.balance-amount {
+    font-size: 16px;
+    margin: 0;
+}
+
+.send-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
+}
+
+.fan {
+    margin: 5px auto 0; /* Adjust margin to remove space below the fan */
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.fan-blades {
+    width: 100%;
+    height: auto; /* Change height to auto to maintain aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.counter-buttons {
+    margin-top: -10px; /* Negative margin to bring the counter closer to the fan */
+}
+
+#currentTimeText {
+    margin-top: -70px; /* Negative margin to move the current time closer to the fan */
+    font-size: 30px; /* Adjust the font size as needed */
+    font-weight: bold;
+}
+#ghs {
+    margin-top: -20px;
+    font-size: 15px; /* Adjust the font size as needed */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: fixed;
+    bottom: 0;
+    width: 450px;
+    max-width: 100%;
+    background-color: #1e1e1e;
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем padding */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+
+}
+
+.navigation-bar button {
+    background: none;
+    border: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px; /* Reduced font size */
+
+}
+
+.navigation-bar button img {
+    width: 30px; /* Reduced size */
+    height: 30px;
+    margin-bottom: 5px;
+    border-radius: 50%; /* Make the icons circular */
+    object-fit: cover; /* Ensure the image covers the entire circular area */
+
+}
+
+.navigation-bar button:hover {
+    color: #007bff;
+
+}
+/* Модальное окно */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть сверху */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включить прокрутку, если необходимо */
+    background-color: rgb(0,0,0); /* Цвет фона */
+    background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+
+.modal-content {
+    background-color: #dcdcdc;
+    margin: 15% auto; /* 15% от верхней и центрированной */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Можно быть больше или меньше, в зависимости от размера экрана */
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#h21, #p1, #p2 {
+    color: #000; /* Change text color to black */
+}
